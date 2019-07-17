@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {throwStatement} from '@babel/types';
 
 export class Search extends Component {
 

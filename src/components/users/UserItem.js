@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 const UserItem = ({ user: { id, login, avatar_url, html_url } }) => {
   return (
     <div className='card text-center'>
       <p>{login}</p>
       <img src={avatar_url} className='round-img' alt='' />
 
-      <a href={html_url} target='_blank'>
-        <button className='btn'>See more</button>
-      </a>
+      <Link to={`user/${login}`}>
+        <button className='btn btn-dark btn-sm my-1'>See more</button>
+      </Link>
     </div>
   );
 };
